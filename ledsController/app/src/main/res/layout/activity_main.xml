@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <!-- Here you put the rest of your current view-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a bluetooth device to connect to (HC-6)"
+            android:layout_margin="7dp"
+            android:layout_marginLeft="17dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        <Spinner
+            android:id="@+id/bluetoothDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="274dp"
+            android:layout_margin="7dp"/>
+
+        <Button
+            android:id="@+id/fetch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch Devices"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="330dp"
+            android:onClick="fetchDevices"
+            android:layout_margin="7dp"/>
+
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            tools:layout_editor_absoluteX="255dp"
+            tools:layout_editor_absoluteY="330dp"
+            android:onClick="connectDevice"
+            android:layout_margin="7dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mode"
+            android:layout_margin="7dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <Spinner
+        android:id="@+id/modeSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-27dp"
+        tools:layout_editor_absoluteY="62dp"
+        android:layout_margin="7dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Colors"
+            android:layout_margin="7dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Color"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="158dp"
+        android:layout_margin="7dp"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secondary color"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="158dp"
+        android:layout_margin="7dp"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Third color"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="158dp"
+        android:layout_margin="7dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brightness"
+            android:layout_margin="7dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/bright"
+            android:layout_width="wrap_content"
+            android:layout_height="10px"
+            android:valueFrom="0"
+            android:valueTo="254"
+            android:value="254"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delay"
+            android:layout_margin="7dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/delay"
+            android:layout_width="wrap_content"
+            android:layout_height="10px"
+            android:valueFrom="0"
+            android:valueTo="200"
+            android:value="0"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            />
+
+        <TextView
+            android:id="@+id/palettesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Palettes"
+            android:layout_margin="7dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <Spinner
+            android:id="@+id/palettes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="274dp"
+            android:layout_margin="7dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"/>
+
+
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="330dp"
+        android:onClick="sendData"
+        android:layout_margin="5dp"/>
+    </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
